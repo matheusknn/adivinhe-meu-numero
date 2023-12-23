@@ -128,8 +128,8 @@ button:hover {
     font-size: 1.4rem;
   }
   main .number {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
   }
   .score-content {
     grid-template-columns: 1fr;
