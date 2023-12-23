@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P';
+  color: #ffffff;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+body {
+  padding: 40px;
+  background-color: rgb(38, 38, 38);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 60px;
+  align-items: center;
+}
+
+header button {
+  padding: 30px 60px;
+  color: black;
+}
+main h1 {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 3rem;
+}
+
+main .number {
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+  width: 300px;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  color: rgb(48, 48, 48);
+  font-size: 4rem;
+  margin-bottom: 60px;
+}
+
+.score-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.score-content input {
+  padding: 20px 40px;
+  color: black;
+  font-size: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+.verificar-placar {
+  display: grid;
+  justify-content: right;
+  gap: 40px;
+}
+
+.verificar-placar button {
+  place-self: center;
+  padding: 10px;
+  color: black;
+}
+.text {
+  margin-bottom: 1.5rem;
+}
+
+.placar {
+  font-size: 1.5rem;
+}
+
+.chances-texto {
+  margin-bottom: 0.875rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00fc15;
+}
+
+@media (max-width: 1250px) {
+  header button {
+    padding: 20px 40px;
+  }
+  main h1 {
+    font-size: 2rem;
+  }
+  main .number {
+    width: 250px;
+    height: 250px;
+  }
+  .score-content {
+    gap: 4rem;
+  }
+  .score-content input {
+    padding: 10px 20px;
+  }
+  .placar {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .placar {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 20px;
+  }
+  header button {
+    padding: 10px 20px;
+  }
+  main h1 {
+    font-size: 1.4rem;
+  }
+  main .number {
+    width: 150px;
+    height: 150px;
+  }
+  .score-content {
+    grid-template-columns: 1fr;
+    justify-items: left;
+  }
+  header p {
+    font-size: 0.875rem;
+  }
+  .score-content input {
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    max-width: 500px;
+    text-align: center;
+  }
+  .verificar-placar {
+    justify-self: center;
+  }
+  .verif .verificar-placar button {
+    padding: 10px 40px;
+  }
+  .placar {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 40px;
+  }
+  header button {
+    padding: 20px;
+    width: 100%;
+  }
+  header p {
+    font-size: 1.3rem;
+  }
+  main h1 {
+    font-size: 0.9rem;
+  }
+  .score-content input {
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    max-width: 400px;
+  }
+  .placar {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .score-content input {
+    padding: 10px 40px;
+    font-size: 1.5rem;
+    max-width: 250px;
+  }
+  main .number {
+    margin-bottom: 40px;
+  }
+  .verificar-placar {
+    gap: 30px;
+  }
+  .score-content {
+    gap: 2.1rem;
+  }
+}

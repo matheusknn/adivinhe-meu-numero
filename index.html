@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivinhe meu número!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="./javascript/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <button>Jogar Novamente!</button>
+      <p>Chance 1 de 20</p>
+    </header>
+    <main>
+      <div>
+        <h1>Adivinhe Meu Número!</h1>
+        <div class="number">?</div>
+      </div>
+      <div class="score-content">
+        <div class="verificar-placar">
+          <input type="number" required placeholder="palpite" />
+          <button>Verificar!</button>
+        </div>
+        <div class="placar">
+          <p class="text">Comece a adivinhar...</p>
+
+          <p class="chances-texto">
+            💯 Chances:<span class="chances-numero">20</span>
+          </p>
+          <p>🥇 Vitórias:<span class="vitorias">0</span></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
