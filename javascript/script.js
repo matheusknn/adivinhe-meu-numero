@@ -14,22 +14,22 @@ let melhorPlacar = 0;
 function aoCliqueVerificar() {
   const numeroDoUsuario = Number(campoDeInput.value);
   if (!numeroDoUsuario || numeroDoUsuario > 40) {
-    paragrafoDeDica.textContent = 'número inválido!';
+    imprimirDica('número inválido!');
   } else if (numeroDoUsuario === numeroSurpresa) {
-    paragrafoDeDica.textContent = '🎉 Número Correto!';
+    imprimirDica('🎉 Número Correto!');
     numero.textContent = numeroSurpresa;
-    mudarEstiloAoGanhar();
+    mudarBackgroundColor('#06740f');
     atualizarMelhorPontuacao();
   } else if (numeroDoUsuario > numeroSurpresa && tentativas > 1) {
-    paragrafoDeDica.textContent = 'você chutou muito alto!';
+    imprimirDica('você chutou muito alto!');
     atualizarTentativas();
   } else if (numeroDoUsuario < numeroSurpresa && tentativas > 1) {
-    paragrafoDeDica.textContent = 'você chutou muito baixo!';
+    imprimirDica('você chutou muito baixo!');
     atualizarTentativas();
   } else {
-    paragrafoDeDica.textContent = '💔 você perdeu o jogo!';
+    imprimirDica('💔 você perdeu o jogo!');
     chances.textContent = 0;
-    mudarEstiloAoPerder();
+    mudarBackgroundColor('#520606');
   }
 }
 
@@ -38,15 +38,14 @@ function atualizarTentativas() {
   chances.textContent = tentativas;
 }
 
-function mudarEstiloAoPerder() {
-  document.body.style.backgroundColor = '#520606';
+function mudarBackgroundColor(cor) {
+  document.body.style.backgroundColor = cor;
 }
 
-function mudarEstiloAoGanhar() {
-  document.body.style.backgroundColor = '#06740f';
+function imprimirDica(dica) {
+  paragrafoDeDica.textContent = dica;
 }
 
-function imprimirDica(dica) {}
 btnDeVerificar.addEventListener('click', aoCliqueVerificar);
 
 function reiniciarGame() {
