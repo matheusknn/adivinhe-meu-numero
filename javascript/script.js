@@ -13,7 +13,7 @@ let melhorPlacar = 0;
 
 function aoCliqueVerificar() {
   const numeroDoUsuario = Number(campoDeInput.value);
-  if (!numeroDoUsuario || numeroDoUsuario > 40) {
+  if (!numeroDoUsuario || numeroDoUsuario > 40 || numeroDoUsuario < 0) {
     imprimirDica('número inválido!');
   } else if (numeroDoUsuario === numeroSurpresa) {
     imprimirDica('🎉 Número Correto!');
@@ -66,3 +66,9 @@ function atualizarMelhorPontuacao() {
 }
 
 btnJogarNovamente.addEventListener('click', reiniciarGame);
+
+campoDeInput.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Enter') {
+    aoCliqueVerificar();
+  }
+});
