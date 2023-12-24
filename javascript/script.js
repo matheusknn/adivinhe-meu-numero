@@ -20,6 +20,7 @@ function aoCliqueVerificar() {
     numero.textContent = numeroSurpresa;
     mudarBackgroundColor('#06740f');
     atualizarMelhorPontuacao();
+    campoDeInput.setAttribute('disabled', '');
   } else if (numeroDoUsuario > numeroSurpresa && tentativas > 1) {
     imprimirDica('você chutou muito alto!');
     atualizarTentativas();
