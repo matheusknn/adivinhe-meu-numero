@@ -15,8 +15,8 @@
   </head>
   <body>
     <header>
-      <button>Jogar Novamente!</button>
-      <p>Chance 1 de 20</p>
+      <button class="btn-jogar-novamente">Jogar Novamente!</button>
+      <p>(entre 1 e 40)</p>
     </header>
     <main>
       <div>
@@ -25,8 +25,8 @@
       </div>
       <div class="score-content">
         <div class="verificar-placar">
-          <input type="number" required placeholder="palpite" />
-          <button>Verificar!</button>
+          <input autofocus type="number" required placeholder="até 40" />
+          <button data-btn-verificar>Verificar!</button>
         </div>
         <div class="placar">
           <p class="text">Comece a adivinhar...</p>
@@ -34,7 +34,7 @@
           <p class="chances-texto">
             💯 Chances:<span class="chances-numero">20</span>
           </p>
-          <p>🥇 Vitórias:<span class="vitorias">0</span></p>
+          <p>🥇 Melhor Placar:<span class="vitorias">0</span></p>
         </div>
       </div>
     </main>
