@@ -57,6 +57,7 @@ function reiniciarGame() {
   chances.textContent = tentativas;
   numero.textContent = '?';
   campoDeInput.value = '';
+  campoDeInput.removeAttribute('disabled');
 }
 
 function atualizarMelhorPontuacao() {
